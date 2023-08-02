@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get Certificate</title>
+</head>
+<body>
+    <script>
+        // Sample JSON array
+        var certificates = [
+            { certName: "Google", Description: "Certificate 1 Description", URL: "https://google.com" },
+            { certName: "Cnn", Description: "Certificate 2 Description", URL: "https://cnn.com" },
+            { certName: "NDTV", Description: "Certificate 3 Description", URL: "https://ndtv.com/" }
+        ];
+
+        // Function to find and redirect based on certName
+        function redirectToCert(certName) {
+            for (var i = 0; i < certificates.length; i++) {
+                if (certificates[i].certName === certName) {
+                    window.location.href = certificates[i].URL;
+                    return;
+                }
+            }
+
+            // certName not found, display the table
+            displayCertificateList();
+        }
+
+        // Function to display the certificate list as a table
+        function displayCertificateList() {
+            var table = "<table border='1'><tr><th>certName</th><th>Description</th></tr>";
+            for (var i = 0; i < certificates.length; i++) {
+                table += "<tr><td>" + certificates[i].certName + "</td><td><a href='" + certificates[i].URL + "'>" + certificates[i].Description + "</a></td></tr>";
+            }
+            table += "</table>";
+            document.body.innerHTML = table;
+        }
+
+        // Get the query parameter from the URL
+        var params = new URLSearchParams(window.location.search);
+        var certNameParam = params.get("certName");
+
+        // Check if the certNameParam is provided
+        if (certNameParam) {
+            redirectToCert(certNameParam);
+        } else {
+            displayCertificateList();
+        }
+    </script>
+</body>
+</html>
