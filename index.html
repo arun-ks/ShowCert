@@ -3,15 +3,11 @@
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="description" content="The URL link for Training Certificates are very long & look unsightly in resumes. This page helps replace them with shorter GitHub links which redirect to the said unsightly links.">
-      <title>Get Certificate</title>
-      
-      <link rel="stylesheet" href="style.css">
-      
+      <title>Get Certificate</title>      
+      <link rel="stylesheet" href="style.css">      
    </head>
    <body>
-      <script>
-            var redirectUrlPrefix = "index.html?id="
-            //var redirectUrlPrefix = "./?id="
+      <script>          
             // JSON array of Certificates
             var certificates = [
                 { certName: "PRINCE2 Foundation",       certDescription: "PRINCE2 Foundation Certificate in Project Management" ,        certURL: "https://candidate.peoplecert.org/ReportsLink.aspx?argType=1&id=C86B6B02FAB371B4D223A12C09D20E5B4126C9B94629133C63BC446A6BDC3F87DBE125E32BD4B0A5" },
@@ -26,6 +22,9 @@
                 { certName: "Gener AI Essentials",      certDescription: "Career Essentials in Generative AI by Microsoft and LinkedIn", certURL: "https://www.linkedin.com/learning/certificates/055e6052183d0b99f35bada18347ba5e150bc5f5bc5a8aa4c492dec3757edc7a?u=105858922"},
                 { certName: "Introduction to AI",       certDescription: "Introduction to AI (LinkedIn)",                                certURL: "https://www.linkedin.com/learning/certificates/377bf2b98bad7db787e46f51c7cd43c04fb09afcd2ae4fa139328e60a81a3926"},
                 { certName: "Building NLP Apps",        certDescription: "Applied AI: Building NLP Apps with Hugging Face Transformers", certURL: "https://www.linkedin.com/learning/certificates/2291dac63947c03e07adcca1383e4c8427dc4e266b6eee78bbf0a7eedd773886?u=105858922"},                
+                { certName: "Ethics in Genr AI",        certDescription: "Ethics in the Age of Generative AI",                           certURL: "https://www.linkedin.com/learning/certificates/a14ab850b218b5d29dde3f8febc22a277f24276516d817760e1037077960cf06?u=105858922"},                
+                
+                
 
                 { certName: "Social Media Visuals",     certDescription: "Canva to Create Social Media Visuals for Business(Coursera)",  certURL: "https://www.coursera.org/account/accomplishments/verify/77JZYWLFGVZF"},
                 { certName: "Power BI Dashboards",       certDescription: "Power BI: Dashboards for Beginners",                            certURL: "https://www.linkedin.com/learning/certificates/0a9e350ff599a0fd9c195eae2f4bf503616477b321ab8dd3fa59d8f3fa011852"},
@@ -36,16 +35,20 @@
                 { certName: "Deutsch A1",               certDescription: "Deutsch AI - Goethe Institute",                                certURL: "pdfs/Certificate Deutsch A1.pdf"}
              ];
          
+            //var redirectUrlPrefix = "index.html?id=";
+            //var redirectUrlPrefix = "./?id=" ;    // This does not work on offline/local file    
+            var redirectUrlPrefix =  window.location.href.split('?')[0] + "?id=";
+
             // Function to find and redirect based on certName
-            function redirectToCert(certName) {
+            function redirectToCert(id) {
                 for (var i = 0; i < certificates.length; i++) {
-                    if (certificates[i].certName === certName) {
+                    if (certificates[i].certName === id) {
                         window.location.href = certificates[i].certURL;
                         return;
                     }
                 }
          
-                // certName not found, display the table
+                // id not found, display default page
                 displayCertificateList();
             }
          
