@@ -6,6 +6,7 @@ This is a simple to reuse pagw which uses a JSON array to store URL Link, Descri
 When the page is opened with a command line parameter, it will search through the JSON array for matching "Code", find the corresponding URL Link & redirect to it.
 In case the command line parameter is not found, the page will show the fill list of Certificate Description with URL Links as a table 
 
+- [Online version which would show all Link](https://arun-ks.github.io/ShowCert/)
 
 ### Delete ME
 #### sample URL & Live page
