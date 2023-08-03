@@ -7,8 +7,11 @@ When the page is opened with a command line parameter, it will search through th
 In case the command line parameter is not found, the page will show the fill list of Certificate Description with URL Links as a table 
 
 
-## Delete ME
- sample URL
-[Certificate X - goes to CNN](https://arun-ks.github.io/ShowCert/?certName=Cnn)
-[Certificate Y - goes to Google](https://arun-ks.github.io/ShowCert/?certName=Google)
+### Delete ME
+#### sample URL & Live page
+- [Certificate X - goes to CNN](https://arun-ks.github.io/ShowCert/?certName=Cnn)
+
+- [Certificate Y - goes to Google](https://arun-ks.github.io/ShowCert/?certName=Google)
+
+- [Link with bad code](https://arun-ks.github.io/ShowCert/?certName=404Code)
 
