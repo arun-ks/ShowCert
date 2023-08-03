@@ -1,16 +1,16 @@
-# ShowCert
-The URL link for Training Certificates are very long & look unsightly in resumes.
+# Redirection to Links for Certificates
+The URL link for online Training Certificates are very long & look unsightly in resumes.
 
-This is a simple to reuseable page which uses a JSON array to store the URL Link of the certificate, its Description & an internal _Redirection Code_ for certificates.
+This is a simple to reuseable page which uses a JSON array to store the URL Link of the certificate, its Description & an internal _Redirection short-name_ for certificates.
 
-When the page is opened with a command line parameter, it will search through the JSON array for matching _"Redirection Code"_, find the corresponding URL Link & redirect to it.
+When the page is opened with a command line parameter("id"), it will search through the JSON array for matching _"Redirection short-name"_, find the corresponding URL Link & redirect to it.
 
 In case the command line parameter is wrong or missing, the page will show the [full list of Certificate Description with URL Links as a table](https://arun-ks.github.io/ShowCert/)
 
 
 <details>
-  <summary>Items for trouble shooting</summary>
+  <summary>To Do Items</summary>
   
-- [Certificate X - goes to CNN](https://arun-ks.github.io/ShowCert/?certName=BBC)
-- [Link with bad code](https://arun-ks.github.io/ShowCert/?certName=404Code)
+- [ ] Update default page to show resume or linkedIn page
+- [ ] Find way to log access attempts  
 </details>
