@@ -7,9 +7,10 @@ When the page is opened with a command line parameter, it will search through th
 
 In case the command line parameter is wrong or missing, the page will show the [full list of Certificate Description with URL Links as a table](https://arun-ks.github.io/ShowCert/)
 
-### Delete ME
-#### sample URL & Live page
+
+<details>
+  <summary>Items for trouble shooting</summary>
+  
 - [Certificate X - goes to CNN](https://arun-ks.github.io/ShowCert/?certName=BBC)
-
 - [Link with bad code](https://arun-ks.github.io/ShowCert/?certName=404Code)
-
+</details>
