@@ -4,26 +4,67 @@
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="description" content="The URL link for Training Certificates are very long & look unsightly in resumes. This page helps replace them with shorter GitHub links which redirect to the said unsightly links.">
       <title>Get Certificate</title>
+      
+      <style>
+      	
+       h2{
+         font-family: Georgia, "Times New Roman", Times, serif;
+         font-size: 28px;
+       }	
+      #certTable {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+       // width: 90%;
+      }
+      
+      #certTable td, #certTable th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      
+      #certTable tr:nth-child(even){background-color: #f2f2f2;}      
+      #certTable tr:hover {background-color: #ddd;}
+      
+      #certTable th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: darkred;
+        color: white;
+      }
+      
+      .showSource {
+        font-family:Arial,Helvetica;
+        font-size:12px;
+        text-align: right;
+        align:right;
+      }
+      </style>
+   
+      
    </head>
    <body>
       <script>
             var redirectUrlPrefix = "index.html?certName="
             // JSON array of Certificates
             var certificates = [
-                { certName: "BBC (Dummy)", certDescription: "Dummy Link for testing 1", certURL: "https://bbc.com" },
-                { certName: "NDTV (Dummy)", certDescription: "Dummy Link for testing 2", certURL: "https://ndtv.com/" },
-                
-                { certName: "PRINCE2 Foundation", certDescription: "PRINCE2® Foundation Certificate in Project Management" , certURL: "https://candidate.peoplecert.org/ReportsLink.aspx?argType=1&id=C86B6B02FAB371B4D223A12C09D20E5B4126C9B94629133C63BC446A6BDC3F87DBE125E32BD4B0A5" },
-                { certName: "PRINCE2 Practitioner", certDescription: "PRINCE2® Practitioner Certificate in Project Management",certURL: "https://candidate.peoplecert.org/ReportsLink.aspx?argType=1&id=2C597A498EA91B20A639EBEA68CB9F2DF359E75EAF6DD1407C943F89B8DED3B0F7226A89B6EF2E22"},
-                { certName: "SAFe Agilist", certDescription: "Certified Scaled Agile Framework(SAFe) 4 Agilist", certURL: "pdfs/Certified SAFe 4 Agilist.pdf"},
-                { certName: "Machine Learning", certDescription: "Machine Learning - Stanford University (Coursera)", certURL: "https://www.coursera.org/account/accomplishments/certificate/KND2DNXL88GR"},
-                { certName: "GDPR Compliance", certDescription: "GDPR Compliance: Essential Training", certURL: "https://www.linkedin.com/learning/certificates/3937716ce7f9b5b53bb91aba2ab7ef1cf83b6244f9ff7e9658d057d39a0de2e8"},
-                { certName: "Successful Negotiation", certDescription: "Successful Negotiation: Essential Strategies and Skills - University of Michigan (Coursera)", certURL: "https://www.coursera.org/account/accomplishments/certificate/2B2R78H2VTAV"},
-                { certName: "Idea Generation", certDescription: "Idea Generation Methods - Karlsruhe Institute of Technology (iVersity)", certURL: "https://iversity.org/verify/bmTUuL"},
-                { certName: "Gener AI Essentials", certDescription: "Career Essentials in Generative AI by Microsoft and LinkedIn", certURL: "https://www.linkedin.com/learning/certificates/055e6052183d0b99f35bada18347ba5e150bc5f5bc5a8aa4c492dec3757edc7a?u=105858922"},
-                { certName: "Building NLP Apps", certDescription: "Applied AI: Building NLP Apps with Hugging Face Transformers", certURL: "https://www.linkedin.com/learning/certificates/2291dac63947c03e07adcca1383e4c8427dc4e266b6eee78bbf0a7eedd773886?u=105858922"},                
-                { certName: "First Aid Awareness", certDescription: "First Aid Level One Awareness", certURL: "pdfs/Certificate First Aid Level 1.pdf"},
-                { certName: "Deutsch A1", certDescription: "Deutsch AI - Goethe Institute", certURL: "pdfs/Certificate Deutsch A1.pdf"}
+                { certName: "BBC (Dummy)",              certDescription: "Dummy Link for testing 1",                                     certURL: "https://bbc.com" },
+                { certName: "NDTV (Dummy)",             certDescription: "Dummy Link for testing 2",                                     certURL: "https://ndtv.com/" },                
+                { certName: "PRINCE2 Foundation",       certDescription: "PRINCE2 Foundation Certificate in Project Management" ,        certURL: "https://candidate.peoplecert.org/ReportsLink.aspx?argType=1&id=C86B6B02FAB371B4D223A12C09D20E5B4126C9B94629133C63BC446A6BDC3F87DBE125E32BD4B0A5" },
+                { certName: "PRINCE2 Practitioner",     certDescription: "PRINCE2 Practitioner Certificate in Project Management",       certURL: "https://candidate.peoplecert.org/ReportsLink.aspx?argType=1&id=2C597A498EA91B20A639EBEA68CB9F2DF359E75EAF6DD1407C943F89B8DED3B0F7226A89B6EF2E22"},
+                { certName: "SAFe Agilist",             certDescription: "Certified Scaled Agile Framework(SAFe) 4 Agilist",             certURL: "pdfs/Certified SAFe 4 Agilist.pdf"},
+                { certName: "Machine Learning",         certDescription: "Machine Learning - Stanford University (Coursera)",            certURL: "https://www.coursera.org/account/accomplishments/certificate/KND2DNXL88GR"},
+                { certName: "Social Media Visuals",     certDescription: "Canva to Create Social Media Visuals for Business(Coursera)",  certURL: "https://www.coursera.org/account/accomplishments/verify/77JZYWLFGVZF"},
+                { certName: "GDPR Compliance",          certDescription: "GDPR Compliance: Essential Training",                          certURL: "https://www.linkedin.com/learning/certificates/3937716ce7f9b5b53bb91aba2ab7ef1cf83b6244f9ff7e9658d057d39a0de2e8"},
+                { certName: "Successful Negotiation",   certDescription: "Successful Negotiation - University of Michigan (Coursera)",   certURL: "https://www.coursera.org/account/accomplishments/certificate/2B2R78H2VTAV"},
+                { certName: "Idea Generation",          certDescription: "Idea Generation Methods - Karlsruhe Institute of Technology ", certURL: "https://iversity.org/verify/bmTUuL"},
+                { certName: "Gener AI Essentials",      certDescription: "Career Essentials in Generative AI by Microsoft and LinkedIn", certURL: "https://www.linkedin.com/learning/certificates/055e6052183d0b99f35bada18347ba5e150bc5f5bc5a8aa4c492dec3757edc7a?u=105858922"},
+                { certName: "Building NLP Apps",        certDescription: "Applied AI: Building NLP Apps with Hugging Face Transformers", certURL: "https://www.linkedin.com/learning/certificates/2291dac63947c03e07adcca1383e4c8427dc4e266b6eee78bbf0a7eedd773886?u=105858922"},                
+                { certName: "First Aid Awareness",      certDescription: "First Aid Level One Awareness",                                certURL: "pdfs/Certificate First Aid Level 1.pdf"},
+                { certName: "Strategic Thinking",       certDescription: "Strategic Thinking",                                           certURL: "https://www.linkedin.com/learning/certificates/674ce03ad2de0b2a414ac3ce6716dd8ddbb01aba4376ae493bd2736c3516e247?u=105858922"},
+                { certName: "Introduction to AI",       certDescription: "Introduction to AI (LinkedIn)",                                certURL: "https://www.linkedin.com/learning/certificates/377bf2b98bad7db787e46f51c7cd43c04fb09afcd2ae4fa139328e60a81a3926"},
+                { certName: "Power BI Dashboards",       certDescription: "Power BI: Dashboards for Beginners",                            certURL: "https://www.linkedin.com/learning/certificates/0a9e350ff599a0fd9c195eae2f4bf503616477b321ab8dd3fa59d8f3fa011852"},
+                { certName: "Deutsch A1",               certDescription: "Deutsch AI - Goethe Institute",                                certURL: "pdfs/Certificate Deutsch A1.pdf"}
              ];
          
             // Function to find and redirect based on certName
@@ -41,13 +82,15 @@
          
             // Function to display the certificate list as a table. This is used when wrong/no parameter is passed
             function displayCertificateList() {
-                var table = "<table border='1'><tr><th>Redirection Link</th><th>Description & Direct Link</th></tr>";
+            	  var pageHtml = "<h2> This is an interstitial page which provides shorter links to certificates</h2> <br>"
+                pageHtml += "<table border='1' id='certTable'><tr><th>Redirection Link</th><th>Description & Direct Link</th></tr>";
                 for (var i = 0; i < certificates.length; i++) {
-                    table += "<tr><td><a href='" + redirectUrlPrefix + certificates[i].certName + "'>" + certificates[i].certName + "</a></td>";
-                    table +="   <td><a href='" + certificates[i].certURL + "'>" + certificates[i].certDescription + "</a></td></tr>";
+                    pageHtml += "<tr><td><a href='" + redirectUrlPrefix + certificates[i].certName + "'>" + certificates[i].certName + "</a></td>";
+                    pageHtml +="   <td><a href='" + certificates[i].certURL + "'>" + certificates[i].certDescription + "</a></td></tr>";
                 }
-                table += "</table>";
-                document.body.innerHTML = table;
+                pageHtml += "</table>";
+                pageHtml += "<div class='showSource'><a href='https://github.com/arun-ks/ShowCert'>Source</a></div>"
+                document.body.innerHTML = pageHtml;
             }
          
             // Get the query parameter from the URL
