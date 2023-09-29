@@ -5,7 +5,7 @@ This is a simple to reuseable page which uses a JSON array to store the URL Link
 
 When the page is opened with a command line parameter("id"), it will search through the JSON array for matching _"Redirection short-name"_, find the corresponding URL Link & redirect to it.
 
-In case the command line parameter is wrong or missing, the page will show the [full list of Certificate Description with URL Links as a table](https://arun-ks.github.io/ShowCert/)
+In case the command line parameter is wrong or missing, the page will show the [full list of Certificate Description with URL Links as a table](https://arun-ks.github.io/cert/)
 
 
 <details>
