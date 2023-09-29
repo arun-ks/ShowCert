@@ -15,17 +15,22 @@
                 { certName: "SAFe Agilist",             certDescription: "Certified Scaled Agile Framework(SAFe) 4 Agilist",             certURL: "pdfs/Certified SAFe 4 Agilist.pdf"},
 
                 { certName: "Successful Negotiation",   certDescription: "Successful Negotiation - University of Michigan (Coursera)",   certURL: "https://www.coursera.org/account/accomplishments/certificate/2B2R78H2VTAV"},
+                { certName: "Negotiation Secrets",      certDescription: "Negotiation Secrets for Master Negotiators (Udemy)",           certURL: "https://amdocsglobal.udemy.com/certificate/UC-89e459d6-3b73-4097-b0c3-680ea7475f51/"},
+                
                 { certName: "Strategic Thinking",       certDescription: "Strategic Thinking",                                           certURL: "https://www.linkedin.com/learning/certificates/674ce03ad2de0b2a414ac3ce6716dd8ddbb01aba4376ae493bd2736c3516e247?u=105858922"},
-                { certName: "Idea Generation",          certDescription: "Idea Generation Methods - Karlsruhe Institute of Technology ", certURL: "https://iversity.org/verify/bmTUuL"},
+                { certName: "Idea Generation",          certDescription: "Idea Generation Methods - Karlsruhe Institute of Technology",  certURL: "https://iversity.org/verify/bmTUuL"},
 
                 { certName: "Machine Learning",         certDescription: "Machine Learning - Stanford University (Coursera)",            certURL: "https://www.coursera.org/account/accomplishments/certificate/KND2DNXL88GR"},
                 { certName: "Gener AI Essentials",      certDescription: "Career Essentials in Generative AI by Microsoft and LinkedIn", certURL: "https://www.linkedin.com/learning/certificates/055e6052183d0b99f35bada18347ba5e150bc5f5bc5a8aa4c492dec3757edc7a?u=105858922"},
                 { certName: "Introduction to AI",       certDescription: "Introduction to AI (LinkedIn)",                                certURL: "https://www.linkedin.com/learning/certificates/377bf2b98bad7db787e46f51c7cd43c04fb09afcd2ae4fa139328e60a81a3926"},
                 { certName: "Building AI NLP Apps",     certDescription: "Applied AI: Building NLP Apps with Hugging Face Transformers", certURL: "https://www.linkedin.com/learning/certificates/2291dac63947c03e07adcca1383e4c8427dc4e266b6eee78bbf0a7eedd773886?u=105858922"},                
                 { certName: "Ethics in Genr AI",        certDescription: "Ethics in the Age of Generative AI",                           certURL: "https://www.linkedin.com/learning/certificates/a14ab850b218b5d29dde3f8febc22a277f24276516d817760e1037077960cf06?u=105858922"},                
+                { certName: "ChatGPT for Business",     certDescription: " Writing with an AI Companion: ChatGPT for Business",          certURL: "https://amdocsglobal.udemy.com/certificate/UC-25a702f8-d3b6-4530-98ee-c71a3381e8e0/"},                                
+                
                 
                 { certName: "Social Media Visuals",     certDescription: "Canva to Create Social Media Visuals for Business(Coursera)",  certURL: "https://www.coursera.org/account/accomplishments/verify/77JZYWLFGVZF"},
-                { certName: "Power BI Dashboards",       certDescription: "Power BI: Dashboards for Beginners",                            certURL: "https://www.linkedin.com/learning/certificates/0a9e350ff599a0fd9c195eae2f4bf503616477b321ab8dd3fa59d8f3fa011852"},
+                { certName: "YouTube Creator",          certDescription: "YouTube Creator Course: Audio & Video Production (Udemy)",     certURL: "https://amdocsglobal.udemy.com/certificate/UC-e5469b33-58a4-4b64-a5f9-ee0f3d10babc/"},
+                { certName: "Power BI Dashboards",      certDescription: "Power BI: Dashboards for Beginners",                           certURL: "https://www.linkedin.com/learning/certificates/0a9e350ff599a0fd9c195eae2f4bf503616477b321ab8dd3fa59d8f3fa011852"},
 
                 { certName: "GDPR Compliance",          certDescription: "GDPR Compliance: Essential Training",                          certURL: "https://www.linkedin.com/learning/certificates/3937716ce7f9b5b53bb91aba2ab7ef1cf83b6244f9ff7e9658d057d39a0de2e8"},
 
@@ -52,14 +57,14 @@
          
             // Function to display the certificate list as a table. This is used when wrong/no parameter is passed
             function displayCertificateList() {
-            	  var pageHtml = "<h2> This is an interstitial page which provides shorter links to certificates</h2> <br>"
+            	  var pageHtml = "<h1> This is an interstitial page which provides shorter links to certificates</h1> If you reached here, then I must have put wrong link/code in my CV, so here is full list of certificates.<br><br>"
                 pageHtml += "<table border='1' id='certTable'><tr><th>Redirection Link</th><th>Description & Direct Link</th></tr>";
                 for (var i = 0; i < certificates.length; i++) {
                     pageHtml += "<tr><td><a href='" + redirectUrlPrefix + certificates[i].certName + "'>" + certificates[i].certName + "</a></td>";
                     pageHtml +="   <td><a href='" + certificates[i].certURL + "'>" + certificates[i].certDescription + "</a></td></tr>";
                 }
                 pageHtml += "</table>";
-                pageHtml += "<div class='showSource'><a href='https://github.com/arun-ks/ShowCert'>Source</a></div>"
+                pageHtml += "<div class='showSource'><a href='https://github.com/arun-ks/cert/'>Source</a></div>"
                 document.body.innerHTML = pageHtml;
             }
          
