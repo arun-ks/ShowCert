@@ -13,9 +13,9 @@ Access the [Live version here](https://arun-ks.github.io/cert/)
 <details>
   <summary>To Do Items</summary>
   
-- [ ] Add tool tip to the headers
-- [ ] Update default page to show resume or linkedIn page
-- [ ] Find way to log access attempts
-- [ ] Create category-based sections within the table
-- [ ] Allow filtering/search on the table.
+- [ ] Usability: Add tool tip to the headers
+- [ ] Enhancement: Update default page to show resume or linkedIn page
+- [ ] Enhanement: Find way to log access attempts
+- [ ] Usability: Create category-based sections within the table
+- [ ] Usability: Allow filtering/search on the table.
 </details>
