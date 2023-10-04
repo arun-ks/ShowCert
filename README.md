@@ -13,6 +13,7 @@ Access the [Live version here](https://arun-ks.github.io/cert/)
 <details>
   <summary>To Do Items</summary>
   
+- [ ] Add tool tip to the headers
 - [ ] Update default page to show resume or linkedIn page
 - [ ] Find way to log access attempts
 - [ ] Create category-based sections within the table
