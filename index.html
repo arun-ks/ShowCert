@@ -9,35 +9,56 @@
    <body>
       <script>          
             // JSON array of Certificates
+          
+            
             var certificates = [
+                // Project Management 
                 { certName: "PRINCE2 Foundation",       certDescription: "PRINCE2 Foundation Certificate in Project Management" ,        certURL: "https://candidate.peoplecert.org/ReportsLink.aspx?argType=1&id=C86B6B02FAB371B4D223A12C09D20E5B4126C9B94629133C63BC446A6BDC3F87DBE125E32BD4B0A5" },
                 { certName: "PRINCE2 Practitioner",     certDescription: "PRINCE2 Practitioner Certificate in Project Management",       certURL: "https://candidate.peoplecert.org/ReportsLink.aspx?argType=1&id=2C597A498EA91B20A639EBEA68CB9F2DF359E75EAF6DD1407C943F89B8DED3B0F7226A89B6EF2E22"},
                 { certName: "SAFe Agilist",             certDescription: "Certified Scaled Agile Framework(SAFe) 4 Agilist",             certURL: "pdfs/Certified SAFe 4 Agilist.pdf"},
 
+                // Negotiation
                 { certName: "Successful Negotiation",   certDescription: "Successful Negotiation - University of Michigan (Coursera)",   certURL: "https://www.coursera.org/account/accomplishments/certificate/2B2R78H2VTAV"},
                 { certName: "Negotiation Secrets",      certDescription: "Negotiation Secrets for Master Negotiators (Udemy)",           certURL: "https://amdocsglobal.udemy.com/certificate/UC-89e459d6-3b73-4097-b0c3-680ea7475f51/"},
+                { certName: "Delivering Bad News",      certDescription: "Delivering Bad News to a Customer (Coursera)",                 certURL: "https://www.linkedin.com/learning/certificates/0f6f527212460392d049b098239ce5c5be4c18cce32a9053bc4195463744134c/"},                
                 
+                //Strategic Thinking
                 { certName: "Strategic Thinking",       certDescription: "Strategic Thinking",                                           certURL: "https://www.linkedin.com/learning/certificates/674ce03ad2de0b2a414ac3ce6716dd8ddbb01aba4376ae493bd2736c3516e247?u=105858922"},
                 { certName: "Idea Generation",          certDescription: "Idea Generation Methods - Karlsruhe Institute of Technology",  certURL: "https://iversity.org/verify/bmTUuL"},
 
+                //ML & AI
                 { certName: "Machine Learning",         certDescription: "Machine Learning - Stanford University (Coursera)",            certURL: "https://www.coursera.org/account/accomplishments/certificate/KND2DNXL88GR"},
                 { certName: "Gener AI Essentials",      certDescription: "Career Essentials in Generative AI by Microsoft and LinkedIn", certURL: "https://www.linkedin.com/learning/certificates/055e6052183d0b99f35bada18347ba5e150bc5f5bc5a8aa4c492dec3757edc7a?u=105858922"},
                 { certName: "Introduction to AI",       certDescription: "Introduction to AI (LinkedIn)",                                certURL: "https://www.linkedin.com/learning/certificates/377bf2b98bad7db787e46f51c7cd43c04fb09afcd2ae4fa139328e60a81a3926"},
+                { certName: "Learning TinyML",          certDescription: "Learning TinyML: A Hands-On Course (LinkedIn)",                certURL: "https://www.linkedin.com/learning/certificates/5d860680270b8394a3b766ce5a74d4ba7fc4c0975e314022c56498b8d76a1abd"},                
                 { certName: "Building AI NLP Apps",     certDescription: "Applied AI: Building NLP Apps with Hugging Face Transformers", certURL: "https://www.linkedin.com/learning/certificates/2291dac63947c03e07adcca1383e4c8427dc4e266b6eee78bbf0a7eedd773886?u=105858922"},                
                 { certName: "ChatGPT for Business",     certDescription: "Writing with an AI Companion: ChatGPT for Business",           certURL: "https://amdocsglobal.udemy.com/certificate/UC-25a702f8-d3b6-4530-98ee-c71a3381e8e0/"},                                
                 { certName: "Ethics in Genr AI",        certDescription: "Ethics in the Age of Generative AI",                           certURL: "https://www.linkedin.com/learning/certificates/a14ab850b218b5d29dde3f8febc22a277f24276516d817760e1037077960cf06?u=105858922"},                
                 { certName: "AI Ethics",                certDescription: "Artificial Intelligence Ethics Certification (Udemy)",         certURL: "https://amdocsglobal.udemy.com/certificate/UC-1a2e9240-b0d8-4244-9283-fe58c9c81328/"},                                
-                                
+                
+                // Social Media, Arts                
                 { certName: "Social Media Visuals",     certDescription: "Canva to Create Social Media Visuals for Business(Coursera)",  certURL: "https://www.coursera.org/account/accomplishments/verify/77JZYWLFGVZF"},
                 { certName: "YouTube Creator",          certDescription: "YouTube Creator Course: Audio & Video Production (Udemy)",     certURL: "https://amdocsglobal.udemy.com/certificate/UC-e5469b33-58a4-4b64-a5f9-ee0f3d10babc/"},
                 { certName: "Power BI Dashboards",      certDescription: "Power BI: Dashboards for Beginners",                           certURL: "https://www.linkedin.com/learning/certificates/0a9e350ff599a0fd9c195eae2f4bf503616477b321ab8dd3fa59d8f3fa011852"},
 
+                //Security
                 { certName: "GDPR Compliance",          certDescription: "GDPR Compliance: Essential Training",                          certURL: "https://www.linkedin.com/learning/certificates/3937716ce7f9b5b53bb91aba2ab7ef1cf83b6244f9ff7e9658d057d39a0de2e8"},
+                
+                //Coding
+                { certName: "Build Android App",        certDescription: "Build Your First Android App (Coursera)",                      certURL: "https://www.coursera.org/account/accomplishments/verify/FTWZSQ3GYLGB"},                
+                { certName: "Python Web Scraping",      certDescription: "Web Scraping with Python (LinkedIn)",                          certURL: "https://www.linkedin.com/learning/certificates/fa8c57951685f3f7140ce1be968b90357618189246d74579b52e50cab52b2208"},
+                { certName: "Learning Python",          certDescription: "Learning Python (LinkedIn)",                                   certURL: "https://www.linkedin.com/learning/certificates/5d860680270b8394a3b766ce5a74d4ba7fc4c0975e314022c56498b8d76a1abd"},                
+                { certName: "Graphite and Grafana",     certDescription: "Graphite and Grafana: Visualizing Performance (LinkedIn)",     certURL: "https://www.linkedin.com/learning/certificates/f41d4cd96508b98241395758bdb7889ff656d3ff2ec0f1e043bba7654684c0fc"},                
 
+                //Misc
                 { certName: "First Aid Awareness",      certDescription: "First Aid Level One Awareness",                                certURL: "pdfs/Certificate First Aid Level 1.pdf"},
                 
+                // Languages
                 { certName: "Deutsch A1",               certDescription: "Deutsch A1 - Goethe Institute",                                certURL: "pdfs/Certificate Deutsch A1.pdf"},
                 { certName: "Bahasa Malaysia L1",       certDescription: "Bahasa Malaysia Level 1 - ICLS",                               certURL: "pdfs/Certificate Bahasa Malaysia Level 1.pdf"}                
+                
+                
+                
              ];
          
             //var redirectUrlPrefix = "index.html?id=";
